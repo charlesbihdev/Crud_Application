@@ -1,8 +1,8 @@
 <?php
-     $host = 'sql107.epizy.com';
-     $username = 'epiz_33384930';
-     $password = 'Z0Us85Sdxgt';
-     $db = '384930_User_Data';
+     $host = 'localhost';
+     $username = 'root';
+     $password = '';
+     $db = 'crud_app';
 
      $con = mysqli_connect($host, $username, $password, $db);
 

@@ -13,9 +13,11 @@ $r = mysqli_fetch_all($result, MYSQLI_ASSOC);
 </style>
 </head>
 <body>
+  <h1 class="text-center text-success my-6">School Database</h1>
 <a href="./create.php"><button type="button" class="btn btn-success">Create User</button></a>
-<table class="table table-striped table-primary">
-  <thead>
+<div class="table-responsive-lg">
+<table class="table table-striped table-primary ">
+  <thead class="thead-dark">
     <tr>
       <th scope="col">#id</th>
       <th scope="col">Full Name</th>
@@ -35,7 +37,7 @@ $r = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <td><?php echo $items['name'] ?></td>
 <td><?php echo $items['phone'] ?></td>
 <td><?php echo $items['email'] ?></td>
-<td><?php echo $items['img_url'] ?></td>
+<td><img src="./images/<?php echo $items['img_url'] ?>" height="130px" width="130px"></td>
 <td>
 <a href="./delete.php?id=<?php echo $items['id'] ?>"><button type="button" class="btn btn-danger">Delete</button></a>
 <a href="./edit.php?id=<?php echo $items['id'] ?>"><button type="button" class="btn btn-primary">Edit</button></a>
@@ -46,6 +48,8 @@ $r = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
   </tbody>
 </table>
+</div>
+
 
 </body>
 </html>
